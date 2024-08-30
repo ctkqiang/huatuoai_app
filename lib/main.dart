@@ -42,50 +42,44 @@ class _HuaTuoAIMainState extends State<HuaTuoAIMain> {
   @override
   Widget build(BuildContext context) {
     Map<String, String> mainMenuIcon = {
-      "中药": "",
-      "方剂": "",
-      "舌诊": "",
-      "经络": "",
-      "病症": "",
-      "成药": "",
+      "中药": "assets/images/logo.png",
+      "方剂": "assets/images/logo.png",
+      "舌诊": "assets/images/logo.png",
+      "经络": "assets/images/logo.png",
+      "病症": "assets/images/logo.png",
+      "成药": "assets/images/logo.png",
     };
 
     List mainMenu = [
-      Menu(
+      imageButton(
         id: 0,
         title: "中药",
-        icon: mainMenuIcon["中药"],
-        description: "",
+        image: mainMenuIcon["中药"],
       ),
-      Menu(
+      imageButton(
         id: 1,
         title: "方剂",
-        icon: mainMenuIcon["方剂"],
-        description: "",
+        image: mainMenuIcon["方剂"],
       ),
-      Menu(
+      imageButton(
         id: 2,
         title: "舌诊",
-        icon: mainMenuIcon["舌诊"],
-        description: "",
+        image: mainMenuIcon["舌诊"],
       ),
-      Menu(
+      imageButton(
         id: 3,
         title: "经络",
-        icon: mainMenuIcon["经络"],
-        description: "",
+        image: mainMenuIcon["经络"],
       ),
-      Menu(
+      imageButton(
         id: 4,
         title: "病症",
-        icon: mainMenuIcon["病症"],
-        description: "",
+        image: mainMenuIcon["病症"],
       ),
-      Menu(
+      imageButton(
         id: 5,
         title: "成药",
-        icon: mainMenuIcon["成药"],
-        description: "",
+        image: mainMenuIcon["成药"],
       ),
     ];
 
@@ -110,21 +104,11 @@ class _HuaTuoAIMainState extends State<HuaTuoAIMain> {
               ),
               itemCount: mainMenu.length,
               itemBuilder: (context, index) {
-                Menu menu = mainMenu[index];
-
-                print(menu.title);
-
                 return InkWell(
                   onTap: () {
                     print(index);
                   },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 10),
-                      Text(menu.title!),
-                    ],
-                  ),
+                  child: mainMenu[index],
                 );
               },
             ),
