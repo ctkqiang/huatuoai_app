@@ -42,8 +42,8 @@ class _HuaTuoAIMainState extends State<HuaTuoAIMain> {
   @override
   Widget build(BuildContext context) {
     Map<String, String> mainMenuIcon = {
-      "中药": "assets/images/logo.png",
-      "方剂": "assets/images/logo.png",
+      "中药": "assets/images/herb.png",
+      "方剂": "assets/images/prescription.png",
       "舌诊": "assets/images/logo.png",
       "经络": "assets/images/logo.png",
       "病症": "assets/images/logo.png",
@@ -90,11 +90,11 @@ class _HuaTuoAIMainState extends State<HuaTuoAIMain> {
       ),
       body: Column(
         children: [
-          const Text("海报"),
+          // const Text("海报"),
 
           /// Grid View
           SizedBox(
-            height: 360,
+            height: 500,
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
